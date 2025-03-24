@@ -70,7 +70,6 @@
             <td><?= $row['GioiTinh'] ?></td>
             <td><?= $row['NgaySinh'] ?></td>
             <td><img src="<?= $row['Hinh'] ?>" width="50"></td>
-            <?= $row['Hinh'] ?>
             <td><?= $row['MaNganh'] ?></td>
             <td>
                 <a href="routes.php?action=edit&MaSV=<?= $row['MaSV'] ?>">Edit</a> |

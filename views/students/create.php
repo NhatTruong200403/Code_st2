@@ -2,11 +2,11 @@
 
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <title>Thêm Sinh Viên</title>
     <style>
-
         h2 {
             color: #007bff;
         }
@@ -20,7 +20,8 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
-        input, select {
+        input,
+        select {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
@@ -41,13 +42,14 @@
         }
     </style>
 </head>
+
 <body>
-    
+
     <form action="routes.php?action=create" method="POST" enctype="multipart/form-data">
-    <h2>Thêm Sinh Viên</h2>
+        <h2>Thêm Sinh Viên</h2>
         Mã SV: <input type="text" name="MaSV" required><br>
         Họ Tên: <input type="text" name="HoTen" required><br>
-        Giới Tính: 
+        Giới Tính:
         <select name="GioiTinh">
             <option value="Nam">Nam</option>
             <option value="Nữ">Nữ</option>
@@ -55,7 +57,7 @@
         Ngày Sinh: <input type="date" name="NgaySinh" required><br>
         Ảnh: <input type="file" name="Hinh" accept="image/*" required><br>
 
-        Ngành: 
+        Ngành:
         <select name="MaNganh" required>
             <?php while ($row = $majors->fetch_assoc()) : ?>
                 <option value="<?= $row['MaNganh'] ?>"><?= $row['TenNganh'] ?></option>
@@ -65,4 +67,5 @@
         <input type="submit" value="Thêm">
     </form>
 </body>
+
 </html>
